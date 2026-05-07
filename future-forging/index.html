@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Future Forging — Career Guidance Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-brand">
+      <span class="brand-icon">⬡</span>
+      <span>Future<strong>Forging</strong></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#assessment">Assessment</a></li>
+      <li><a href="#tracks">Tracks</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#assessment" class="btn-nav">Start Free</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-bg">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">🚀 AI-Powered Career Intelligence</div>
+      <h1 class="hero-title">Forge Your<br/><span class="gradient-text">Perfect Career</span></h1>
+      <p class="hero-sub">Take our intelligent assessment and unlock personalized recommendations across 10+ professional tracks — built on real career data.</p>
+      <div class="hero-actions">
+        <a href="#assessment" class="btn-primary">Begin Assessment →</a>
+        <a href="#tracks" class="btn-ghost">Explore Tracks</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Career Tracks</span></div>
+        <div class="stat"><span class="stat-num">95%</span><span class="stat-label">Match Accuracy</span></div>
+        <div class="stat"><span class="stat-num">50K+</span><span class="stat-label">Users Guided</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating-card fc1">
+        <span class="fc-icon">💻</span>
+        <span>Software Engineer</span>
+        <span class="fc-match">98% Match</span>
+      </div>
+      <div class="floating-card fc2">
+        <span class="fc-icon">🎨</span>
+        <span>UX Designer</span>
+        <span class="fc-match">85% Match</span>
+      </div>
+      <div class="floating-card fc3">
+        <span class="fc-icon">📊</span>
+        <span>Data Scientist</span>
+        <span class="fc-match">79% Match</span>
+      </div>
+      <div class="hero-circle">
+        <div class="circle-inner">
+          <span class="circle-emoji">🎯</span>
+          <span>Your Dream<br/>Career</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ASSESSMENT SECTION -->
+  <section class="assessment" id="assessment">
+    <div class="section-label">CAREER ASSESSMENT</div>
+    <h2 class="section-title">Discover Your Ideal Path</h2>
+    <p class="section-sub">Answer a few questions and we'll match you to the best career tracks</p>
+
+    <div class="quiz-container" id="quizContainer">
+      <!-- Step Indicator -->
+      <div class="steps">
+        <div class="step active" id="step-dot-1">1</div>
+        <div class="step-line"></div>
+        <div class="step" id="step-dot-2">2</div>
+        <div class="step-line"></div>
+        <div class="step" id="step-dot-3">3</div>
+        <div class="step-line"></div>
+        <div class="step" id="step-dot-4">4</div>
+        <div class="step-line"></div>
+        <div class="step" id="step-dot-5">5</div>
+      </div>
+
+      <!-- Questions -->
+      <div class="question-card" id="q1">
+        <div class="q-number">Question 1 of 5</div>
+        <h3 class="q-text">What type of work excites you most?</h3>
+        <div class="options">
+          <button class="option" onclick="selectOption(this, 'q1', 'creative')">🎨 Creating visual designs & experiences</button>
+          <button class="option" onclick="selectOption(this, 'q1', 'technical')">💻 Building software & systems</button>
+          <button class="option" onclick="selectOption(this, 'q1', 'analytical')">📊 Analyzing data & finding insights</button>
+          <button class="option" onclick="selectOption(this, 'q1', 'leadership')">🤝 Leading teams & managing projects</button>
+        </div>
+        <button class="btn-next" onclick="nextQuestion(1)" disabled>Next →</button>
+      </div>
+
+      <div class="question-card hidden" id="q2">
+        <div class="q-number">Question 2 of 5</div>
+        <h3 class="q-text">Which skill best describes you?</h3>
+        <div class="options">
+          <button class="option" onclick="selectOption(this, 'q2', 'coding')">⌨️ I love writing code and solving logic</button>
+          <button class="option" onclick="selectOption(this, 'q2', 'communication')">🗣️ I'm great at explaining and presenting</button>
+          <button class="option" onclick="selectOption(this, 'q2', 'math')">🔢 Numbers and statistics fascinate me</button>
+          <button class="option" onclick="selectOption(this, 'q2', 'artistic')">✏️ I have a strong aesthetic sensibility</button>
+        </div>
+        <button class="btn-next" onclick="nextQuestion(2)" disabled>Next →</button>
+      </div>
+
+      <div class="question-card hidden" id="q3">
+        <div class="q-number">Question 3 of 5</div>
+        <h3 class="q-text">What's your preferred work environment?</h3>
+        <div class="options">
+          <button class="option" onclick="selectOption(this, 'q3', 'remote')">🏠 Remote — flexibility and independence</button>
+          <button class="option" onclick="selectOption(this, 'q3', 'office')">🏢 Office — collaboration and energy</button>
+          <button class="option" onclick="selectOption(this, 'q3', 'hybrid')">⚡ Hybrid — best of both worlds</button>
+          <button class="option" onclick="selectOption(this, 'q3', 'field')">🌍 On the field — dynamic & changing</button>
+        </div>
+        <button class="btn-next" onclick="nextQuestion(3)" disabled>Next →</button>
+      </div>
+
+      <div class="question-card hidden" id="q4">
+        <div class="q-number">Question 4 of 5</div>
+        <h3 class="q-text">What motivates you the most?</h3>
+        <div class="options">
+          <button class="option" onclick="selectOption(this, 'q4', 'impact')">🌱 Making a positive social impact</button>
+          <button class="option" onclick="selectOption(this, 'q4', 'money')">💰 High salary and financial security</button>
+          <button class="option" onclick="selectOption(this, 'q4', 'growth')">📈 Continuous learning and growth</button>
+          <button class="option" onclick="selectOption(this, 'q4', 'creativity')">💡 Freedom to be creative and innovative</button>
+        </div>
+        <button class="btn-next" onclick="nextQuestion(4)" disabled>Next →</button>
+      </div>
+
+      <div class="question-card hidden" id="q5">
+        <div class="q-number">Question 5 of 5</div>
+        <h3 class="q-text">What's your current education level?</h3>
+        <div class="options">
+          <button class="option" onclick="selectOption(this, 'q5', 'high-school')">🎒 High School / 12th Grade</button>
+          <button class="option" onclick="selectOption(this, 'q5', 'undergrad')">🎓 Pursuing / Completed Bachelor's</button>
+          <button class="option" onclick="selectOption(this, 'q5', 'postgrad')">📚 Pursuing / Completed Master's</button>
+          <button class="option" onclick="selectOption(this, 'q5', 'self-taught')">🔥 Self-taught / Bootcamp grad</button>
+        </div>
+        <button class="btn-next btn-submit" onclick="submitAssessment()" disabled>Get My Results 🎯</button>
+      </div>
+
+      <!-- Results -->
+      <div class="question-card results-card hidden" id="results">
+        <div class="results-header">
+          <span class="results-badge">✨ Your Results Are Ready</span>
+          <h3>Your Top Career Matches</h3>
+        </div>
+        <div class="results-grid" id="resultsGrid"></div>
+        <button class="btn-primary" onclick="restartQuiz()">Retake Assessment</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRACKS SECTION -->
+  <section class="tracks" id="tracks">
+    <div class="section-label">CAREER TRACKS</div>
+    <h2 class="section-title">10+ Professional Pathways</h2>
+    <div class="tracks-grid">
+      <div class="track-card tc-purple">
+        <span class="track-icon">💻</span>
+        <h4>Software Engineering</h4>
+        <p>Build apps, systems, and digital products</p>
+        <span class="track-demand high">High Demand</span>
+      </div>
+      <div class="track-card tc-blue">
+        <span class="track-icon">🎨</span>
+        <h4>UX/UI Design</h4>
+        <p>Shape user experiences and visual systems</p>
+        <span class="track-demand high">High Demand</span>
+      </div>
+      <div class="track-card tc-green">
+        <span class="track-icon">📊</span>
+        <h4>Data Science</h4>
+        <p>Extract insights from complex datasets</p>
+        <span class="track-demand very-high">Very High</span>
+      </div>
+      <div class="track-card tc-orange">
+        <span class="track-icon">🤖</span>
+        <h4>AI / ML Engineering</h4>
+        <p>Build intelligent systems and models</p>
+        <span class="track-demand very-high">Very High</span>
+      </div>
+      <div class="track-card tc-pink">
+        <span class="track-icon">📱</span>
+        <h4>Mobile Development</h4>
+        <p>Create apps for iOS and Android platforms</p>
+        <span class="track-demand high">High Demand</span>
+      </div>
+      <div class="track-card tc-teal">
+        <span class="track-icon">☁️</span>
+        <h4>Cloud & DevOps</h4>
+        <p>Architect and maintain cloud infrastructure</p>
+        <span class="track-demand high">High Demand</span>
+      </div>
+      <div class="track-card tc-yellow">
+        <span class="track-icon">🔐</span>
+        <h4>Cybersecurity</h4>
+        <p>Protect systems from digital threats</p>
+        <span class="track-demand very-high">Very High</span>
+      </div>
+      <div class="track-card tc-red">
+        <span class="track-icon">📣</span>
+        <h4>Digital Marketing</h4>
+        <p>Drive growth through digital channels</p>
+        <span class="track-demand medium">Medium</span>
+      </div>
+      <div class="track-card tc-indigo">
+        <span class="track-icon">💼</span>
+        <h4>Product Management</h4>
+        <p>Lead product strategy and roadmaps</p>
+        <span class="track-demand high">High Demand</span>
+      </div>
+      <div class="track-card tc-cyan">
+        <span class="track-icon">🏗️</span>
+        <h4>Backend Engineering</h4>
+        <p>Build powerful server-side applications</p>
+        <span class="track-demand high">High Demand</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section class="resources" id="resources">
+    <div class="section-label">FREE RESOURCES</div>
+    <h2 class="section-title">Fuel Your Career Journey</h2>
+    <div class="resources-grid">
+      <div class="resource-card">
+        <span class="res-icon">📘</span>
+        <h4>Resume Templates</h4>
+        <p>ATS-optimized templates for every industry</p>
+        <a href="#" class="res-link">Download Free →</a>
+      </div>
+      <div class="resource-card">
+        <span class="res-icon">🎥</span>
+        <h4>Interview Prep</h4>
+        <p>Video guides and mock question banks</p>
+        <a href="#" class="res-link">Start Practicing →</a>
+      </div>
+      <div class="resource-card">
+        <span class="res-icon">🗺️</span>
+        <h4>Roadmaps</h4>
+        <p>Step-by-step skill roadmaps for each track</p>
+        <a href="#" class="res-link">Explore Roadmaps →</a>
+      </div>
+      <div class="resource-card">
+        <span class="res-icon">🤝</span>
+        <h4>Mentorship</h4>
+        <p>Connect with industry professionals</p>
+        <a href="#" class="res-link">Find a Mentor →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="brand-icon">⬡</span>
+      <span>Future<strong>Forging</strong></span>
+    </div>
+    <p>Empowering the next generation of professionals</p>
+    <p class="footer-copy">© 2025 FutureForging. Built with ❤️ by Sachin Khubchandani</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
