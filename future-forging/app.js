@@ -18,7 +18,7 @@ const careerMap = {
 const trackIcons = {
   "Software Engineering": "💻", "UX/UI Design": "🎨", "Data Science": "📊",
   "AI/ML Engineering": "🤖", "Mobile Development": "📱", "Cloud & DevOps": "☁️",
-  "Cybersecurity": "🔐", "Digital Marketing": "📣", "Product Management": "💼",
+  "Cybersecurity": "🔐", "Digital Marketing Service": "📣", "Product Management": "💼",
   "Backend Engineering": "🏗️"
 };
 
